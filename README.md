@@ -30,6 +30,16 @@ softwares e verificar se há atualizações para eles.
 
 ## 3. Por que utilizar o Git como controle de versionamento?
 
+
+Seu principal diferencial em relação a outras soluções similares é a arquitetura
+descentralizada, que faz com que cada contribuidor do projeto tenha uma cópia
+funcional na máquina podedo ser acessada e alterada mesmo offline, fascilitando 
+projetos com uma grande quantidade de contribuidores. Para projetos Open Source o
+Git conta com  o Push Request, que é uma requisição de alteração feita do contribuidor
+para o dono do repositório. O Git também conta com a possibilidade de, em caso de falha ou
+erro, retornar o projeto para uma versão anterior, se tornando essencial para projetos
+que serão realizados por equipes que trabalham de forma paralela.
+
 ## 4. Quais as vantagens do Git? 
 
 ## 5. Qual a importância da utilização do controle de versionamento no desenvolvimento de um software?
