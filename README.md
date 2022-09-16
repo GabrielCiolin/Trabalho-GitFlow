@@ -42,6 +42,15 @@ que serão realizados por equipes que trabalham de forma paralela.
 
 ## 4. Quais as vantagens do Git? 
 
+
+O git é considerado o software de controle de versão com o melhor desempenho atualmente
+com operações que são pensadas para trazer praticidade e agilidade. É altamente flexivel
+tornando possível rastrear ramificações independente do tamanho ou complexidade do projeto,
+é sempre possível adapta-lo ao seu fluxo de trabalho. Todas as informações, conteúdos de código,
+versões, commits, tudo é protegido com o algoritmo de hash de criptografia SHA1, proporcionando
+segurança contra alterações erradas ou maliciosas. Outro ponto chave é que, por ser muito usado,
+a comunidade de usuários é grande e ativa, o que facilita para tirar duvidas ou buscar informações.
+
 ## 5. Qual a importância da utilização do controle de versionamento no desenvolvimento de um software?
 
 ## 6. Cite pelo menos três ferramentas de controle de versão e faça um breve detalhamento sobre cada uma delas.
