@@ -5,6 +5,7 @@
     --accent-color: #EE6C4D;
     --neutral-dark: #EE6C4D;
     --neutral-light: #FAFAFA;
+    --primary-lighter: #3B4350;
 }
 
 html, body {
@@ -33,13 +34,45 @@ nav .brand span {
 }
 
 nav ul {
-    background-color: red;
-    position: absolute;
-    left: 0;
-    padding: .6rem 2rem;
-    /* padding-left: 2rem; */
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.navbar-item {
+    display: flex;
+    cursor: pointer;
+    margin-left: -2rem;
+    padding: .5rem;
+    padding-left: 2rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    font-weight: 600;
+    color: var(--neutral-light);
+    transition: background ease-in-out .2s;
+}
+
+.navbar-item.active, .navbar-item:hover {
+    background-color: var(--primary-lighter);
+}
+
+.navbar-item i {
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar-item i svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: .7rem;
+}
+
+.navbar-item i svg line,
+.navbar-item i svg path,
+.navbar-item i svg polyline,
+.navbar-item i svg circle
+{
+    stroke: var(--accent-color);
 }
 
 .container main {
