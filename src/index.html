@@ -1,51 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            TODO:
-            - 
-            <aside>
-                <nav>
-                    <h1>Git Flow</h1>
-                    <ul>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        TODO:
+        -
+        <aside>
+            <nav>
+                <h1>Git Flow</h1>
+                <ul>
 
                         <li>Conceitos</li>
-                       
-                        <li></li>
-                       
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </nav>
-            </aside>
-            <main id="main">
-                <article>
-                    <h1>Para que serve o commit e qual a melhor forma de utilizá-lo?</h1>
-                    <section>
-                        <p>O commit pode ser entendido como mudanças provisórias de forma permanente, pontuando o fim de uma
+
+                    <li></li>
+
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <article>
+                <h1>Para que serve o commit e qual a melhor forma de utilizá-lo?</h1>
+                <section>
+                    <p>O commit pode ser entendido como mudanças provisórias de forma permanente, pontuando o fim de uma
                         transação e proporcionando a elas durabilidade tal como o princípio ACID, muito utilizado nas
                         ciências da computação. </p>
-                        <p>Apresentando tal informação como base, pode concluir que o Commit, de forma mais simples,
+                    <p>Apresentando tal informação como base, pode concluir que o Commit, de forma mais simples,
                         acrescenta as modificações realizadas mais recentemente, no qual se torna parte da revisão
                         principal do repositório, sendo mantidos de forma indefinida. Dessa forma ele permite que outros
                         usuários mantenham uma versão mais atualizada ao fazerem uma atualização no repositório. </p>
-                        <p>Estão exemplificados abaixo alguns comandos que podem ser utilizados para fazer um commit: </p>
-                        <code>
-                            git commit -m 'mensagem do commit'
-                            git add .
-                            git push geek master
+                    <p>Estão exemplificados abaixo alguns comandos que podem ser utilizados para fazer um commit: </p>
+                    <code>
+                            git commit -m 'mensagem do commit' |
+                            git add . |
+                            git push geek master|
                             git commit -a -m 'commit message'
                         </code>
-                    </section>
-                </article>
-            </main>
-        </div>
-        <script src="scripts.js"></script>
-    </body>
+                </section>
+            </article>
+
+            <article>
+                <h1>Qual a diferença entre commit e push ?</h1>
+                <section>
+                    <p>O comando Push é utilizado para transferir os commits do repositório local para o remoto,
+                        normalmente hospedado em um serviço de gerenciamento de software em nuvem como Github ou Gitlab.
+                    </p>
+                    <p>Já o commit pode ser considerado como um checkpoint, podendo ser utilizado a cada etapa do
+                        projeto em desenvolvimento, servindo como um marco a cada novo ajuste ou funcionalidade
+                        acrescentada ao repositório juntamente com o respectivo autor que realizou as alterações.
+                        Vale ressaltar que é uma boa prática o emprego do push após cada commit, pois assim, mesmo que
+                        ocorra perda de dados por conta de algum imprevisto ou problema técnico, as informações estarão
+                        salvas no repositório remoto.
+                    </p>
+                </section>
+            </article>
+
+            <article>
+                <h1>O que é tag?</h1>
+                <section>
+                    <p>A tag é uma forma de marcar pontos importantes ou específicos no histórico do Git, muito
+                        utilizado para controle de versões. Sendo assim, para utilizá-la basta digitar o comando “git
+                        tag”, seguida pelo nome da tag a ser utilizada. Vale ressaltar que o git utiliza dois tipos de
+                        tags sendo elas a leve e a anotada.
+                    </p>
+                    <p>A tag leve é somente uma etiqueta associada ao commit, e pode servir para indicar uma mudança de
+                        versão ou uma release.</p>
+                    <p>Já as tags anotadas, além das funcionalidades padrão das tags, também permite associação de
+                        metadados do autor e uma mensagem personalizada. Sua criação é recomendada quando se é
+                        necessário especificar detalhadamente uma alteração, tal como um changelog.
+                    </p>
+                </section>
+            </article>
+
+            <article>
+                <h1>O que é branch</h1>
+                <section>
+                    <p>A respeito da branch, podem ser consideradas ramificações do código principal, permitindo dessa
+                        forma que vários programadores atuem em diferentes partes de maneira lógica e independente,
+                        facilitando a colaboração entre as diferentes equipes e integrantes envolvidos no projeto ou até
+                        mesmo em projetos individuais. Em outros VCSs (Version Control System) esse processo de
+                        ramificação pode apresentar um alto custo no que diz respeito ao tempo e espaço em disco.
+                        Entretanto, em Git, essas ramificações fazem parte do processo diário das equipes de
+                        desenvolvimento, podendo ser usadas para alterações simples e complexas, auxiliando de forma
+                        significativa a organização das equipes e promovendo a produtividade.
+                    </p>
+                </section>
+            </article>
+
+            <article>
+                <h1>Como resolver possíveis conflitos no Git?
+                </h1>
+                <section>
+                    <p>
+                        Ao realizar um merge, muitas vezes o git não consegue entender e ‘’escolher’’ qual a melhor
+                        decisão a ser tomada. Nesse caso é necessária uma intervenção manual, sendo preciso identificar
+                        através da procura ou códigos, como o git status, os arquivos com linhas de códigos afetadas.
+                        Quando conflitos acontecem, é necessário intervenção manual para selecionar qual código das
+                        versões conflituosas será, de fato, inserida no projeto por meio de um novo merge
+                    </p>
+                    <p>A principal técnica utilizada para resolução de conflitos é o merge. No merge, são listados ambos
+                        os arquivos conflituosos, ou seja, que possuem alterações realizadas no mesmo trecho de código.
+                        Nesses casos, é necessário selecionar manualmente qual das versões será mantida. Há também a
+                        possibilidade de realizar os ajustes necessários diretamente no merge, a fim de compatibilizar
+                        funcionalidades distintas. Alguns comandos podem auxiliar nesse processo, seja descartando
+                        arquivos não necessários ou mesmo cancelando completamente o merge.
+                    </p>
+                </section>
+            </article>
+
+            <article>
+                <h1>Em caso de incêndio, quais são os comandos git necessários antes de sair do prédio?
+                </h1>
+                <section>
+                    <p>Os comandos digitados necessários são:</p>
+                    <code>
+                            git add* |
+                            git commit |
+                            git push |
+                            git out here
+                        </code>
+                </section>
+            </article>
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
 </html>
