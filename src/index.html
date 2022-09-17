@@ -25,9 +25,25 @@
                 </nav>
             </aside>
             <main id="main">
-                <section>
+                <article>
                     <h1>Para que serve o commit e qual a melhor forma de utilizá-lo?</h1>
-                </section>
+                    <section>
+                        <p>O commit pode ser entendido como mudanças provisórias de forma permanente, pontuando o fim de uma
+                        transação e proporcionando a elas durabilidade tal como o princípio ACID, muito utilizado nas
+                        ciências da computação. </p>
+                        <p>Apresentando tal informação como base, pode concluir que o Commit, de forma mais simples,
+                        acrescenta as modificações realizadas mais recentemente, no qual se torna parte da revisão
+                        principal do repositório, sendo mantidos de forma indefinida. Dessa forma ele permite que outros
+                        usuários mantenham uma versão mais atualizada ao fazerem uma atualização no repositório. </p>
+                        <p>Estão exemplificados abaixo alguns comandos que podem ser utilizados para fazer um commit: </p>
+                        <code>
+                            git commit -m 'mensagem do commit'
+                            git add .
+                            git push geek master
+                            git commit -a -m 'commit message'
+                        </code>
+                    </section>
+                </article>
             </main>
         </div>
         <script src="scripts.js"></script>
