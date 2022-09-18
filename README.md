@@ -53,5 +53,10 @@ a comunidade de usuários é grande e ativa, o que facilita para tirar duvidas o
 
 ## 5. Qual a importância da utilização do controle de versionamento no desenvolvimento de um software?
 
+
+O versionamento nos dá o poder de comunicação a partir de simples números ou palavras, é claro que isso deve ser formalizado através de algum documento, mais comumente, utilizamos o README para tal.
+Dessa forma, é possível criar pequenas versões internas e cada desenvolvedor fazer suas alterações sem preocupação com os demais colegas de trabalho. Sendo possível transmitir as dependências e a necessidade de atualização do programa, aumentando a fácilidade do trabalho em equipe e a vida útil do software.
+Outra funcionalidade que o versionamento nos oferece é o histórico de versões, que auxilia em correção de bugs, melhora a segurança sendo possível um downgrade, entre outros aspectos que podem ser abordados.
+
 ## 6. Cite pelo menos três ferramentas de controle de versão e faça um breve detalhamento sobre cada uma delas.
 
