@@ -60,3 +60,18 @@ Outra funcionalidade que o versionamento nos oferece é o histórico de versões
 
 ## 6. Cite pelo menos três ferramentas de controle de versão e faça um breve detalhamento sobre cada uma delas.
 
+
+As ferramentas de controle de versão tem quase que um checklist do que ter, por
+isso são tão idênticas. Entre tantas ferramentas temos o Bazaar, Mercurial e
+Subversion. Na ferramenta Bazaar, o controle de versão ajuda a rastrear o
+histórico do projeto ao longo tempo e a colaborar facilmente com
+desenvolvedores, tendo uma usabilidade mais amigável. Diferentemente do
+Mercurial que também é necessário a entender conceitos básicos do controle de
+versão, tais como sincronização de repositórios e o registro do histórico em um
+grafo acícilico direcionado. Este não possui nenhuma particularidade de
+implementação que fique exposta na estrutura do projeto ou nos comandos.
+Subversion: no que diz respeito ao meio coorporativo, ele é uma ferramenta
+muito utilizada. Considerada uma das mais simples de ser empregada além de ser
+rápida na execução de suas funcionalidades. Porém, a mesma já apresentou
+problemas ao executar as principais funções de controle, mas aparentemente, até
+a sua atual versão, esse problema foi corrigido.
