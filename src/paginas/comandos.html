@@ -1,0 +1,116 @@
+<h1>Comandos</h1>
+<br>
+<div>
+    <div>
+        <h2>1. Git Clone</h2>
+        <p><strong>Git Clone</strong> é um comando usado para baixar a versão mais recente do código fonte de um repositório remoto e salvar em seu computador.</p>
+        <p>Há algumas maneiras de utilizar, nesse caso vamos exemplificar com HTTPS.</p>
+        <p>Para clonar, é somente digitar o código abaixo no bash do git e aguardar o download.</p>
+        <code>git clone &lt;https://link-com-o-nome-do-repositório&gt;</code>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>2. Git Branch</h2>
+        <p><strong>Git Branch</strong> é muito utilizado no meio de um time de desenvolvimento de software. Utilizando o comando, é criada uma ramificação local, onde é possível publicar uma versão do software para alguma tarefa em específico.</p>
+        <p>É usado para criar ramificações que geralmente tem seus nomes prés estabelecidos por convenções, como por exemplo, uma branch somente para fazer testes de acréscimos de funcionalidades.</p>
+        <p></p>
+        <code>git branch &lt;nome-da-branch&gt;</code>
+        <p>Com a branch criada localmente, podemos enviar para o repositório remoto com o seguinte comando.</p>
+        <code>git push &lt;local-remoto&gt; &lt;nome-da-branch&gt;</code>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>3. Git Checkout</h2>
+        <p>O <strong>Git Checkout</strong> é utilizado para 'trocar' de branch. Para conseguir usar uma branch que foi criada, precisamos 'entrar' nela, ai vem a utilização do comando.</p>
+        <p>Há alguns passos que devem ser seguidos para a troca de branch com sucesso:</p>
+        <li>Não pode haver alterações sem serem salvas na branch, ou seja, deve usar ou o commit ou o stash antes de fazer a troca.</li>
+        <li>A branch que você quer 'entrar' deve existir em seu espaço local.</li>
+        <code>git checkout &lt;nome-da-branch&gt;</code>
+        <p>Também temos a possibilidade de criar uma branch e já dar o checkout ao mesmo tempo. Para isso, podemos usar o comando abaixo.</p>
+        <code>git checkout -b &lt;nome-da-branch&gt;</code>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>4. Git Status</h2>
+        <p>O comando <strong>Git Status</strong> nos fornece todas as informações necessárias sobre a branch atual e os arquivos.</p>
+        <code>git status</code>
+        <p>Com ele temos: </p>
+        <li>Se a branch atual está atualizada.</li>
+        <li>Se precisamos fazer o commit, push ou pull de alguma informação.</li>
+        <li>Se os arquivos estão em fas de stage, fora dessa fase ou se não estão sendo rastreados.</li>
+        <li>Se há criação, modificação ou exclusão de arquivos.</li>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>5. Git Add</h2>
+        <p>Quando criamos, exlcluimos ou alteramos um arquivo, essas alterações são feitas localmente, não sendo adicionadas sozinha ao próximo commit (a não ser que seja feita alteração das configurações). O <strong>Git Add</strong> é utilizado para incluir essas alterações de um ou vários arquivos no próximo commit, fazendo com que estes fiquem em 'stage'.</p>
+        <p>Para adicionar um único arquivo:</p>
+        <code>git add &lt;arquivo&gt;</code>
+        <p>Para adicionar todos os arquivos modificados:</p>
+        <code>git add -A</code>
+        <p>Observação: O comando git add não faz alteração no repositório, só é salvo quando usamos o git commit.</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>6. Git Commit</h2>
+        <p>Após as alterações estarem em stage podemos salva-lás em espaço de trabalho local. O <strong>Git Commit</strong> é como se criássemos um ponto de restauração para mais tarde. Junto dessa funcionalidade de salvar as alterações que estão em stage, ele adiciona uma mensagem como forma de explicar o que há nessas alterações que foram feitas. </p>
+        <code>git commit -m "mensagem do commit"</code>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>7. Git Push</h2>
+        <p>Após salvar as informações em espaço local, podemos enviar ao servidor remoto. Utilizamos o comando <strong>Git Push</strong> para realizar o upload dos commits no repositório remoto.</p>
+        <code>git push &lt;repositório-remoto&gt; &lt;nome-da-branch&gt;</code>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>8. Git Pull</h2>
+        <p>O <strong>Git Pull</strong> é usado para obter as atualizações do repositório remoto. Podemos dizer que esse comando é uma combinação de dois: <strong>Git Fetch e Git Merge</strong>.</p>
+        <p>Quando o git pull é disparado, recebemos as atualizações do repositório remoto(git fetch) e aplicamos imediatamente as alterações em localmente (git merge).</p>
+        <p>Essa operação de atualização pode causar alguns conflitos que você deverá resolver manualmente.</p>
+        <code>git pull &lt;repositório-remoto&gt;</code>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>9. Git Revert</h2>
+        <p>Algumas vezes precisamos desfazer alterações, seja por bugs, mudança de escopo, entre outros. Podemos fazer de diversas formas, mas sempre tomando o devido cuidado com os comandos para não fazer exclusões indesejadas.</p>
+        <p>Para usar o <strong>Git Revert</strong>, precisamos descobrir o código hash do commit que queremos desfazer. Usando o comando git log, conseguimos essa informação.</p>
+        <code>git log --oneline;</code>
+        <p>Após, podemos usar o git revert com o código descoberto.</p>
+        <code>git revert &lt;código-hash&gt;</code>
+        <p>Depois, você verá uma tela de editor, basta pressionar shift + q para sair:</p>
+        <p>Com isso, teremos nossos arquivos com as alterações desfeitas. Esse comando não exclui o commit revertido, ele cria um outro commit.</p>
+        <p>Essa funcionalidade permite 'voltarmos no tempo' sem mexer no histórico. Outra medida de segurança está no fato de que tudo acontece em nosso sistema local, a menos que demos um push de tudo para o repositório remoto.</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h2>10. Git Merge</h2>
+        <p>O <strong>Git Merge</strong> é utilizado para integrar informações de uma branch para outra. Por exemplo, quando está com tudo certo na branch que estamos desenvolvendo, podemos colocar o código na banch pai (dev ou master/main).</p>
+        <p>Primeiro devemos trocar para a branch que vai receber o código:</p>
+        <code>git checkout &lt;dev&gt;</code>
+        <p>Antes do merge, atualize sua branch dev local:</p>
+        <code>git fetch</code>
+        <p>Por fim, podemos fazer o merge da sua branch do recurso em dev:</p>
+        <code>git merge &lt;nome-da-branch-com-o-recurso&gt;</code>
+        <p>Observação: Antes de fazer o merge, certifique que a sua branch dev tenha a versão mais recente. Do contrário, você pode ter que lidar com conflitos.</p>
+
+    </div>
+</div>
